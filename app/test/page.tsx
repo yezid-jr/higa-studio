@@ -36,6 +36,7 @@ export default function ProductCard({
           alt={title}
           width={300}
           height={200}
+          draggable={false}
           className="w-full h-45 object-cover rounded-2xl"
         />
 
