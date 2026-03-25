@@ -32,7 +32,7 @@ export default function ProductCard({
   const discountedPrice = Math.round(price / (1 - discount / 100));
 
   return (
-    <div className="w-65 rounded-3xl border-2 border-gray-300 p-4 bg-white">
+    <div className="w-60 rounded-3xl border-2 border-gray-300 p-4 bg-white">
 
       {/* Imagen */}
       <div className="relative">
