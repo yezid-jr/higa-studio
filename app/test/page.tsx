@@ -1,6 +1,11 @@
+"use client";
+
 import { Heart, ShoppingBag } from "lucide-react";
+import { useState } from "react";
+import Image from "next/image";
 
 type Props = {
+  img: string;
   title: string;
   size: string;
   price: number;
@@ -9,12 +14,15 @@ type Props = {
 };
 
 export default function ProductCard({
+  img,
   title = "Producto de ejemplo",
   size = "Tamaño: 10 x 10 cm",
   price = 50000,
   discount = 50,
   categoria = "Categoría: Tatuaje",
 }: Props) {
+
+  const [liked, setLiked] = useState(false);
   const discountedPrice = Math.round(price / (1 - discount / 100));
   return (
     <div className="w-65 rounded-3xl border-2 border-gray-300 p-4 bg-white">
@@ -22,7 +30,14 @@ export default function ProductCard({
       {/* Imagen */}
       <div className="relative">
 
-        <div className="w-full h-45 bg-gray-300 rounded-2xl" />
+
+        <Image
+          src={img || "/imgs/placeholder-img.svg"}
+          alt={title}
+          width={300}
+          height={200}
+          className="w-full h-45 object-cover rounded-2xl"
+        />
 
         {/* Badge Categoria */}
         {categoria && (
@@ -36,10 +51,10 @@ export default function ProductCard({
 
 
       {/* Contenido */}
-      <div className="mt-4">
+      <div className="mt-2">
 
         {/* Iconos */}
-        <div className="flex justify-between gap-2 mb-2">
+        <div className="flex justify-between items-start gap-2 mb-2">
 
           {/* Badge descuento */}
           {discount && (
@@ -47,40 +62,60 @@ export default function ProductCard({
               -{discount}%
             </span>
           )}
+          <div className="flex">
 
-          <div className="flex gap-2">
+            {/* Botón corazón */}
+            <button
+              onClick={() => setLiked(!liked)}
+              className="p-[5] inline-flex items-center justify-center 
+                     rounded-full 
+                     hover:bg-gray-400/30 
+                     active:bg-gray-400/50 
+                     transition"
+            >
+              <Heart
+                className={`w-6 h-6 transition 
+              ${liked ? "fill-red-500 text-red-500" : "text-gray-600"}`}
+              />
+            </button>
 
-            <Heart className="w-6 h-6 cursor-pointer" />
-
-            <ShoppingBag className="w-6 h-6 cursor-pointer" />
-
+            {/* Bolsa */}
+            <button
+              className="p-[5] flex items-center justify-center 
+                     rounded-full 
+                     hover:bg-gray-400/30 
+                     active:bg-gray-400/50 
+                     transition"
+            >
+              <ShoppingBag className="w-6 h-6 text-gray-600" />
+            </button>
           </div>
         </div>
+      </div>
 
-        {/* Título */}
-        <h3 className={`text-lg font-medium`}>
-          {title}
-        </h3>
+      {/* Título */}
+      <h3 className={`text-lg font-medium`}>
+        {title}
+      </h3>
 
-        {/* Tamaño */}
-        <p className="text-xs text-gray-500">
-          {size}
-        </p>
+      {/* Tamaño */}
+      <p className="text-xs text-gray-500">
+        {size}
+      </p>
 
-        {/* Precios */}
-        <div className="flex items-center gap-2 mt-2">
+      {/* Precios */}
+      <div className="flex items-center gap-2 mt-2">
 
-          <span className={`text-[#CD1E1E] font-semibold text-xl`}>
-            ${price.toLocaleString()}
+        <span className={`text-[#CD1E1E] font-semibold text-xl`}>
+          ${price.toLocaleString()}
+        </span>
+
+        {discount > 0 && (
+          <span className={`text-l text-gray-500 line-through`}>
+            ${discountedPrice.toLocaleString()}
           </span>
+        )}
 
-          {discount > 0 && (
-            <span className={`text-l text-gray-500 line-through`}>
-              ${discountedPrice.toLocaleString()}
-            </span>
-          )}
-
-        </div>
       </div>
     </div>
   );
