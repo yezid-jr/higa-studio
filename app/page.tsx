@@ -1,6 +1,3 @@
-import Image from "next/image";
-import Card from "./test/page";
-
 export default function Home() {
   return (
     <>
