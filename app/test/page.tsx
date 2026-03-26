@@ -1,42 +1,40 @@
 "use client";
 
-import { Search } from "lucide-react";
-import { useState, useEffect } from "react";
+import Image from "next/image";
 
-export default function SearchBar() {
+type PropsProfileInfo = {
+    name: string;
+    avatarUrl: string;
+}; 
 
-  const [isFocused, setIsFocused] = useState(false);
-  const [query, setQuery] = useState("");
-  const [debouncedQuery, setDebouncedQuery] = useState("");
+export default function ProfileInfo({ name = "@higa.ink", avatarUrl }: PropsProfileInfo) {
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setDebouncedQuery(query);
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, [query]);
-
-  useEffect(() => {
-    if (debouncedQuery) {
-      console.log("Buscando:", debouncedQuery);
-
-      // fetch a API
-      // fetch(`/api/search?q=${debouncedQuery}`)
-    }
-  }, [debouncedQuery]);
-
-
-  return (
-    <div className="flex items-center gap-2 bg-gray-200 rounded-full px-4 py-2">
-        <Search className="w-5 h-5 text-gray-400" />
-        <input
-            type="text"
-            placeholder={isFocused ? "" : "Search products..."}
-            onFocus={() => setIsFocused(true)}
-            onBlur={() => setIsFocused(false)}
-            className="bg-transparent outline-none w-full text-sm text-gray-700 placeholder-gray-400"
-        />
-    </div>
-  );
+    return (
+        <div className="p-3">
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-5">
+                <Image
+                    src={avatarUrl || "/imgs/profile_avatar_placeholder.png"}
+                    alt={name}
+                    width={80}
+                    height={80}
+                    draggable={false}
+                    className="
+                        w-21 h-21
+                        rounded-full
+                        sm:w-25 sm:h-25
+                        md:w-29 md:h-29
+                        object-cover"
+                />
+                <span className="
+                            text-lg 
+                            sm:text-xl
+                            md:text-2xl
+                            font-semibold
+                            "
+                >
+                    {name}
+                </span>
+            </div>
+        </div>
+    );
 }
