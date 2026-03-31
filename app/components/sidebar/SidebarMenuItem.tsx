@@ -4,11 +4,11 @@ type Props = {
 
 export default function SidebarMenuItem({ title }: Props) {
   return (
-    <div className="flex justify-between items-center p-3 rounded hover:bg-gray-100 cursor-pointer">
+    <div className="flex justify-between items-center p-3 rounded hover:bg-gray-100 cursor-pointer text-xl">
 
       <span>{title}</span>
 
-      <span>›</span>
+      <span></span>
 
     </div>
   );

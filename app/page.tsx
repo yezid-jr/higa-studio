@@ -1,8 +1,12 @@
+import NewsSlider from "./components/NewsSlider";
+
 export default function Home() {
   return (
-    <>
-      <h1>Welcome to Higa Studio</h1>
-      <p>This is the home page of Higa Studio.</p>
-    </>
+    <div className="flex flex-col items-center w-full max-w-6xl mx-auto">
+        <NewsSlider />
+      <div className="">
+      </div>
+        
+    </div>
   );
 }
