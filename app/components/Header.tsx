@@ -2,20 +2,53 @@
 
 import { Menu, UserRound, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "./../components/sidebar/Sidebar";
+import Logo from "./Logo";
+import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const pathname = usePathname();
+
+  // Ruta Home
+  const isHome = pathname === "/";
+
+  useEffect(() => {
+    if (!isHome) return;
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isHome]);
 
   return (
     <>
-      <header className="flex items-center justify-between px-4 py-4 border-b bg-white">
+      <header
+  className={cn(
+    "fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 py-4 transition-all duration-300",
+    
+    !isHome && "bg-white border-b shadow-sm",
+
+    isHome &&
+      (scrolled
+        ? "bg-white border-b shadow-sm text-black"
+        : "bg-transparent border-b border-transparent text-white")
+  )}
+>
 
         {/* LEFT */}
         <div className="flex items-center gap-3">
 
-          {/* Hamburger */}
           <Button 
             variant="ghost"
             size="icon"
@@ -24,10 +57,7 @@ export default function Header() {
             <Menu className="size-7" />
           </Button>
 
-          {/* Logo */}
-          <h1 className="text-2xl font-semibold">
-            Higa<span className="text-red-500">Ink</span>
-          </h1>
+          <Logo />
 
         </div>
 
@@ -46,7 +76,6 @@ export default function Header() {
 
       </header>
 
-      {/* Sidebar */}
       <Sidebar open={open} setOpen={setOpen} />
     </>
   );
