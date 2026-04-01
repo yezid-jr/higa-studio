@@ -4,10 +4,10 @@ import Image from "next/image";
 
 type PropsProfileInfo = {
     name: string;
-    avatarUrl: string;
+    avatarUrl?: string;
 }; 
 
-export default function ProfileInfo({ name = "@higa.ink", avatarUrl }: PropsProfileInfo) {
+export default function ProfileInfo({ name, avatarUrl }: PropsProfileInfo) {
 
     return (
         <div className="p-3">
