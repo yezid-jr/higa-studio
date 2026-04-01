@@ -62,7 +62,7 @@ export default function Header() {
         </div>
 
         {/* RIGHT */}
-        <div className="flex items-center gap-3">
+        {/* <div className="flex items-center gap-3">
 
           <Button variant="ghost" size="icon">
             <UserRound className="size-7" />
@@ -72,7 +72,7 @@ export default function Header() {
             <ShoppingBag className="size-7" />
           </Button>
 
-        </div>
+        </div> */}
 
       </header>
 

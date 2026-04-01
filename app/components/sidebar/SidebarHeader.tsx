@@ -11,7 +11,10 @@ export default function SidebarHeader() {
       {isLogged ? (
         <SidebarUser />
       ) : (
-        <SidebarAuthButtons />
+        <>
+          <SidebarUser />
+          <SidebarAuthButtons />
+        </>
       )}
 
     </div>

@@ -4,7 +4,7 @@ export default function Hero() {
 
       <img
         src="imgs/MyTattoos/Blackwork-tattoo.webp"
-        className="absolute inset-0 w-full h-full object-cover grayscale brightness-50"
+        className="absolute inset-0 w-full h-full object-cover grayscale brightness-50 object-[0%_center]"
       />
 
       <div className="relative z-10 flex flex-col justify-end h-full px-6 pb-24 text-white">

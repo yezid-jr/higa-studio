@@ -9,17 +9,21 @@ import {
 
 import SidebarHeader from "./SidebarHeader";
 import SidebarMenu from "./SidebarMenu";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 type Props = {
   open: boolean;
   setOpen: (v: boolean) => void;
 };
 
-export default function Sidebar({
-  open,
-  setOpen,
-}: Props) {
+export default function Sidebar({ open, setOpen }: Props) {
+  const pathname = usePathname();
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname, setOpen]);
+  
   return (
 
     <Drawer

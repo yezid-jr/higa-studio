@@ -1,3 +1,4 @@
+import AboutMe from "./components/AboutMe";
 import GalleryPreview from "./components/GalleryPreview";
 import Hero from "./components/Hero";
 import NewsSlider from "./components/NewsSlider";
@@ -23,13 +24,7 @@ export default function Home() {
       <Hero />
       <NewsSlider />
       <GalleryPreview />
+      <AboutMe />
     </main>
   );
 }
-
-const tattoos = [
-        "/imgs/MyTattoos/anime-tattoo.webp",
-        "/imgs/MyTattoos/blackwork-tattoo.webp",
-        "/imgs/MyTattoos/dark-tattoo.webp",
-        "/imgs/MyTattoos/flash-tattoo.webp",
-    ];
