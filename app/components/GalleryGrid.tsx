@@ -29,7 +29,7 @@ export default function GalleryGrid() {
   return (
 
     <PhotoProvider
-    bannerVisible={false}
+    bannerVisible={true}
     maskOpacity={0.6}
     loop={false}
     >

@@ -1,4 +1,5 @@
 import CategoryChips from "@/app/components/filter/FilterBar";
+import GalleryGrid from "@/app/components/GalleryGrid";
 import ImageName from "@/app/components/ImageName";
 
 export default function Portfolio() {
@@ -8,6 +9,7 @@ export default function Portfolio() {
       <ImageName name="@higa.ink" />
 
       <CategoryChips />
+      <GalleryGrid />
 
     </div>
   );

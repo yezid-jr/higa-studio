@@ -32,7 +32,7 @@ export default function ProductCard({
   const discountedPrice = Math.round(price / (1 - discount / 100));
 
   return (
-    <div className="w-60 rounded-3xl border-2 border-gray-300 p-4 bg-white">
+    <div className="w-full rounded-3xl border-2 border-gray-300 p-4 bg-white">
 
       {/* Imagen */}
       <div className="relative">
@@ -44,7 +44,7 @@ export default function ProductCard({
           width={300}
           height={200}
           draggable={false}
-          className="w-full h-45 object-cover rounded-2xl"
+          className="w-full h-[4/5] object-cover rounded-2xl"
         />
 
         {/* Badge Categoria */}
@@ -117,9 +117,9 @@ export default function ProductCard({
       </p>
 
       {/* Precios */}
-      <div className="flex items-center gap-2 mt-2">
+      <div className="flex flex-wrap items-center mt-2">
 
-        <span className={`text-[#CD1E1E] font-semibold text-xl`}>
+        <span className={`text-[#CD1E1E] font-semibold text-xl mr-2`}>
           ${price.toLocaleString()}
         </span>
 
