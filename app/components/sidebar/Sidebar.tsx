@@ -32,7 +32,7 @@ export default function Sidebar({ open, setOpen }: Props) {
       direction="left"
     >
 
-      <DrawerContent className="w-64 p-0">
+      <DrawerContent className="w-64 p-0 bg-stone-100">
 
         <DrawerHeader className="hidden">
 

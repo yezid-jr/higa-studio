@@ -1,6 +1,32 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function Hero() {
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <section className="relative h-screen rounded-b-lg overflow-hidden sm:h-[80vh] lg:h-[60vh]">
+    <section
+      className={`
+        relative h-screen overflow-hidden
+        sm:h-[80vh] lg:h-[60vh]
+        transition-all duration-300
+        ${scrolled ? "rounded-b-lg" : "rounded-none"}
+      `}
+    >
 
       <img
         src="imgs/MyTattoos/Blackwork-tattoo.webp"

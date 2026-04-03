@@ -5,7 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 type Props = {
-  img: string;
+  img: string | null;
   title: string;
   size: string;
   price: number;
@@ -65,7 +65,7 @@ export default function ProductCard({
         <div className="flex justify-between items-start gap-2 mb-2">
 
           {/* Badge descuento */}
-          <span className="min-w-15">
+          <span className="flex items-center gap-1">
 
             {discount > 0 && (
               <span className={`flex justify-content leading-loose bg-[#CD1E1E] text-white text-xs px-4 rounded-full`}>
@@ -112,7 +112,7 @@ export default function ProductCard({
       </h3>
 
       {/* Tamaño */}
-      <p className="text-xs text-gray-500">
+      <p className="text-sm md:text-base text-gray-500">
         {size}
       </p>
 
