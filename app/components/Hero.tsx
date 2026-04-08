@@ -1,5 +1,6 @@
 "use client";
 
+import { BsWhatsapp } from "react-icons/bs";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
@@ -43,9 +44,26 @@ export default function Hero() {
           Especialista en blackwork y realismo
         </p>
 
-        <button className="mt-6 bg-black px-6 py-3 rounded-lg">
+        <a
+          href="https://wa.me/573052201926"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            flex items-center 
+            mt-6 
+            mx-auto
+            bg-black 
+            text-white
+            px-[36%]
+            py-3 
+            rounded-lg
+            hover:bg-neutral-800
+            transition
+          "
+        >
           Reservar cita
-        </button>
+          <BsWhatsapp className="w-5 h-5 ml-3" />
+        </a>
 
       </div>
 

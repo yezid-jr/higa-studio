@@ -7,7 +7,7 @@ export default function SidebarMenu() {
       <SidebarMenuItem title="Home" href="/" />
       <SidebarMenuItem title="Portfolio" href="/portfolio" />
       <SidebarMenuItem title="Products" href="/products" />
-      <SidebarMenuItem title="Categories" href="/categories"/>
+      <SidebarMenuItem title="Ideas" href="/ideas"/>
       <SidebarMenuItem title="Healing Process" href="/healing-process"/>
 
     </nav>

@@ -21,7 +21,7 @@ export default function AboutSection() {
         {/* TEXTO */}
         <div>
 
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 id="about" className="text-3xl md:text-4xl font-bold">
             Sobre mí
           </h2>
 

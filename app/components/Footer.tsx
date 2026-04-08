@@ -17,13 +17,13 @@ export default function Footer() {
 
             <Logo />
 
-            <p className="mt-4 text-body text-sm leading-relaxed">
+            {/* <p className="mt-4 text-body text-sm leading-relaxed">
               Estudio de tatuajes especializado en
               <strong> blackwork</strong> y
               <strong> realismo</strong> en Barranquilla.
               Creamos piezas únicas con altos estándares
               de higiene y calidad.
-            </p>
+            </p> */}
 
           </div>
 
@@ -37,26 +37,20 @@ export default function Footer() {
             <ul className="space-y-3 text-body">
 
               <li>
-                <Link href="/" className="hover:text-heading transition">
+                <Link href="#home" className="hover:text-heading transition">
                   Inicio
                 </Link>
               </li>
 
               <li>
-                <Link href="/gallery" className="hover:text-heading transition">
+                <Link href="#gallery" className="hover:text-heading transition">
                   Galería
                 </Link>
               </li>
 
               <li>
-                <Link href="/about" className="hover:text-heading transition">
+                <Link href="#about" className="hover:text-heading transition">
                   Sobre mí
-                </Link>
-              </li>
-
-              <li>
-                <Link href="/contact" className="hover:text-heading transition">
-                  Contacto
                 </Link>
               </li>
 
@@ -68,14 +62,14 @@ export default function Footer() {
           <div>
 
             <h3 className="font-semibold text-heading mb-4 uppercase text-sm">
-              Sígueme
+              Contacto
             </h3>
 
             <div className="flex gap-4">
 
               {/* Instagram */}
               <a
-                href="https://instagram.com/"
+                href="https://instagram.com/higa-ink"
                 target="_blank"
                 className="p-2 rounded hover:bg-gray-200 transition"
               >
@@ -83,17 +77,17 @@ export default function Footer() {
               </a>
 
               {/* Facebook */}
-              <a
+              {/* <a
                 href="https://facebook.com/"
                 target="_blank"
                 className="p-2 rounded hover:bg-gray-200 transition"
               >
                 <BsFacebook className="w-5 h-5" />
-              </a>
+              </a> */}
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/573000000000"
+                href="https://wa.me/573052201926"
                 target="_blank"
                 className="p-2 rounded hover:bg-gray-200 transition"
               >

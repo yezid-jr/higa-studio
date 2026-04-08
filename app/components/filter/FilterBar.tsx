@@ -5,13 +5,13 @@ import { SlidersHorizontal } from "lucide-react";
 
 import FilterSheet from "./FilterSheet";
 import { useFilters } from "../../hooks/FiltersProvider";
-import { mockFilters } from "../../data/mockfilters";
+import filters from "../../data/filters.json";
 import FilterChip from "./Chip";
 
 export default function CategoryChips() {
 
   // Obtener grupo category del mock
-  const categoryGroup = mockFilters.find(
+  const categoryGroup = filters.find(
     (group) => group.id === "category"
   );
 

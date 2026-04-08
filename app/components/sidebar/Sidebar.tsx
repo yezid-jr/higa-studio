@@ -45,7 +45,7 @@ export default function Sidebar({ open, setOpen }: Props) {
         {/* TU SIDEBAR NORMAL */}
         <div className="h-screen text-black flex flex-col">
 
-          <SidebarHeader />
+          {/* <SidebarHeader /> */}
 
           <SidebarMenu />
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { Drawer } from "hiraki";
-import { mockFilters } from "../../data/mockfilters";
+import filters from "../../data/filters.json";
 import FilterChip from "./Chip";
 import { useFilters } from "../../hooks/FiltersProvider";
 
@@ -15,7 +15,7 @@ export default function FilterSheet({
   onClose,
 }: Props) {
 
-  // 🔥 Conectar filtros globales
+  // Conectar filtros globales
   const {
     selectedFilters,
     toggleFilter,
@@ -77,7 +77,7 @@ export default function FilterSheet({
 
           <div className="flex flex-col gap-6 mb-6">
 
-            {mockFilters.map((group) => (
+            {filters.map((group) => (
 
               <div key={group.id}>
 
