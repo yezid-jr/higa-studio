@@ -1,7 +1,7 @@
-import SearchBar from "@/app/components/SearchBar";
-import CategoryChips from "@/app/components/filter/FilterBar";
-import ProductsGrid from "@/app/components/products-page/ProductGrid";
-import { products } from "@/app/data/mockProducts";
+import SearchBar from "../../components/SearchBar";
+import CategoryChips from "../../components/filter/FilterBar";
+import ProductsGrid from "../../components/products-page/ProductGrid";
+import { products } from "../../data/mockProducts";
 
 export default function Products() {
     return (
