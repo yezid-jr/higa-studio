@@ -1,11 +1,11 @@
 "use client";
 
 import { Menu, UserRound, ShoppingBag } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import { useState, useEffect } from "react";
 import Sidebar from "./../components/sidebar/Sidebar";
 import Logo from "./Logo";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import { usePathname } from "next/navigation";
 
 export default function Header() {

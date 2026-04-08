@@ -1,4 +1,4 @@
-import { FiltersProvider } from "@/app/hooks/FiltersProvider";
+import { FiltersProvider } from "../../hooks/FiltersProvider";
 
 export default function IdeasLayout({
   children,

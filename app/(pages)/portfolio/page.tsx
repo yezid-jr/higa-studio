@@ -1,6 +1,6 @@
-import CategoryChips from "@/app/components/filter/FilterBar";
-import GalleryGrid from "@/app/components/GalleryGrid";
-import ImageName from "@/app/components/ImageName";
+import CategoryChips from "../../components/filter/FilterBar";
+import GalleryGrid from "../../components/GalleryGrid";
+import ImageName from "../../components/ImageName";
 
 export default function Portfolio() {
   return (
