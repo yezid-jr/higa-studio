@@ -32,7 +32,7 @@ export default function Hero() {
     >
 
       <Image
-        src="/imgs/MyTattoos/Blackwork-tattoo.webp"
+        src={"/imgs/MyTattoos/Blackwork-tattoo.webp"}
         alt="Blackwork tattoo example"
         fill={true}
         className="absolute inset-0 w-full h-full object-cover grayscale brightness-50 object-[0%_center]"
