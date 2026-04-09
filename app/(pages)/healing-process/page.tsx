@@ -166,13 +166,13 @@ export default function CuidadoTatuajePage() {
         {/* Do */}
         <div className="bg-neutral-100 rounded-xl p-5">
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-2 h-2 rounded-full bg-neutral-900 flex-shrink-0" />
+            <span className="w-2 h-2 rounded-full bg-neutral-900 shrink-0" />
             <span className="text-sm font-bold uppercase tracking-widest text-neutral-900">Sí debes hacer</span>
           </div>
           <ul className="flex flex-col gap-2.5">
             {doList.map((item, i) => (
               <li key={i} className="flex items-start gap-2.5 text-sm font-light text-neutral-700 leading-snug">
-                <span className="w-4 h-4 rounded-full bg-neutral-900 flex-shrink-0 flex items-center justify-center mt-0.5">
+                <span className="w-4 h-4 rounded-full bg-neutral-900 shrink-0 flex items-center justify-center mt-0.5">
                   <svg className="w-2.5 h-2.5 text-white" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
                     <path d="M2 5l2.5 2.5L8 3" />
                   </svg>
@@ -186,13 +186,13 @@ export default function CuidadoTatuajePage() {
         {/* Don't */}
         <div className="bg-neutral-100 rounded-xl p-5">
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-2 h-2 rounded-full bg-red-500 flex-shrink-0" />
+            <span className="w-2 h-2 rounded-full bg-red-500 shrink-0" />
             <span className="text-sm font-bold uppercase tracking-widest text-red-500">No debes hacer</span>
           </div>
           <ul className="flex flex-col gap-2.5">
             {dontList.map((item, i) => (
               <li key={i} className="flex items-start gap-2.5 text-sm font-light text-neutral-700 leading-snug">
-                <span className="w-4 h-4 rounded-full bg-red-50 border border-red-400 flex-shrink-0 flex items-center justify-center mt-0.5">
+                <span className="w-4 h-4 rounded-full bg-red-50 border border-red-400 shrink-0 flex items-center justify-center mt-0.5">
                   <svg className="w-2.5 h-2.5 text-red-500" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
                     <path d="M2 2l6 6M8 2l-6 6" />
                   </svg>
@@ -205,7 +205,7 @@ export default function CuidadoTatuajePage() {
 
         {/* Footer note */}
         <div className="bg-neutral-900 rounded-xl p-5 flex gap-3.5 items-start mt-1">
-          <div className="w-9 h-9 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+          <div className="w-9 h-9 bg-red-600 rounded-full flex items-center justify-center shrink-0">
             <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               <circle cx="12" cy="12" r="10" />
               <line x1="12" y1="8" x2="12" y2="12" />
