@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { BsWhatsapp } from "react-icons/bs";
 import { useEffect, useState } from "react";
 
@@ -29,8 +30,9 @@ export default function Hero() {
       `}
     >
 
-      <img
+      <Image
         src="imgs/MyTattoos/Blackwork-tattoo.webp"
+        alt="Blackwork tattoo example"
         className="absolute inset-0 w-full h-full object-cover grayscale brightness-50 object-[0%_center]"
       />
 

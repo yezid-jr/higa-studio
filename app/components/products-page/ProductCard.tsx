@@ -39,7 +39,7 @@ export default function ProductCard({
 
 
         <Image
-          src={img || "/imgs/placeholder-img.svg"}
+          src={img || "/imgs/Placeholders/placeholder-img.svg"}
           alt={title}
           width={300}
           height={200}

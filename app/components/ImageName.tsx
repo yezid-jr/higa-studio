@@ -13,7 +13,7 @@ export default function ProfileInfo({ name, avatarUrl }: PropsProfileInfo) {
         <div className="p-3">
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-5">
                 <Image
-                    src={avatarUrl || "/imgs/profile_avatar_placeholder.png"}
+                    src={avatarUrl || "/imgs/Placeholders/profile-avatar-placeholder.png"}
                     alt={name}
                     width={80}
                     height={80}
