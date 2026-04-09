@@ -1,4 +1,4 @@
-import SearchBar from "../../components/SearchBar";
+import SearchBar from "../../components/BarraBusqueda";
 import CategoryChips from "../../components/filter/FilterBar";
 import ProductsGrid from "../../components/products-page/ProductGrid";
 import { products } from "../../data/mockProducts";
