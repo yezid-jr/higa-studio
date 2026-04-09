@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { BsWhatsapp } from "react-icons/bs";
 import { useEffect, useState } from "react";
+import { Fullscreen } from "lucide-react";
 
 export default function Hero() {
 
@@ -26,13 +27,14 @@ export default function Hero() {
         relative h-screen overflow-hidden
         sm:h-[80vh] lg:h-[60vh]
         transition-all duration-300
-        ${scrolled ? "rounded-b-lg" : "rounded-none"}
+        ${scrolled ? "rounded-b-3xl" : "rounded-none"}
       `}
     >
 
       <Image
-        src="imgs/MyTattoos/Blackwork-tattoo.webp"
+        src="/imgs/MyTattoos/Blackwork-tattoo.webp"
         alt="Blackwork tattoo example"
+        fill={true}
         className="absolute inset-0 w-full h-full object-cover grayscale brightness-50 object-[0%_center]"
       />
 
@@ -53,10 +55,9 @@ export default function Hero() {
           className="
             flex items-center 
             mt-6 
-            mx-auto
             bg-black 
             text-white
-            px-[36%]
+            px-8
             py-3 
             rounded-lg
             hover:bg-neutral-800
