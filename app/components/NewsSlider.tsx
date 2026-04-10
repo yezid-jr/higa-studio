@@ -15,7 +15,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const newsImages = [
-    "/imgs/Promotions/Active/slider-promocion-semana-santa-30k.png",
+    // "/imgs/Promotions/Active/slider-promocion-semana-santa-30k.png",
     "/imgs/Promotions/Active/promo-mes-abril-40k-2026.png",
     "/imgs/Promotions/Active/slider-tatuate-ahora-2026.png",
     // "/imgs/MyTattoos/dark-tattoo.webp",
