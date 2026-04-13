@@ -48,7 +48,7 @@ export default function CategoryChips() {
       <div
         className={`
           absolute left-0 h-full w-12 
-          bg-gradient-to-r 
+          bg-linear-to-r 
           from-white dark:from-neutral-950
           to-transparent 
           pointer-events-none 
@@ -129,7 +129,7 @@ export default function CategoryChips() {
         <div
           className={`
             absolute right-0 h-full w-46 
-            bg-gradient-to-l 
+            bg-linear-to-l 
             from-white dark:from-neutral-950
             to-transparent 
             pointer-events-none 

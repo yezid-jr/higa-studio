@@ -38,7 +38,7 @@ export default function Contacto() {
               key={label}
               className="flex items-center gap-4 px-4 py-3 rounded-2xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800"
             >
-              <Icon className="w-5 h-5 text-[#CD1E1E] flex-shrink-0" />
+              <Icon className="w-5 h-5 text-[#CD1E1E] shrink-0" />
               <div>
                 <p className="text-xs text-neutral-500 dark:text-neutral-400 uppercase tracking-widest">
                   {label}

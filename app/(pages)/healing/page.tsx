@@ -212,7 +212,7 @@ export default function Page() {
 
             {/* GRADIENTE top */}
             <div
-              className="absolute inset-x-0 top-0 h-52 z-[1] pointer-events-none"
+              className="absolute inset-x-0 top-0 h-52 z-1 pointer-events-none"
               style={{
                 background:
                   "linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 70%, transparent 100%)",
@@ -221,7 +221,7 @@ export default function Page() {
 
             {/* GRADIENTE bottom */}
             <div
-              className="absolute inset-x-0 bottom-0 h-72 z-[1] pointer-events-none"
+              className="absolute inset-x-0 bottom-0 h-72 z-1 pointer-events-none"
               style={{
                 background:
                   "linear-gradient(to top, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.6) 55%, transparent 100%)",
