@@ -1,11 +1,11 @@
-import SearchBar from "../../components/BarraBusqueda";
-import CategoryChips from "../../components/filter/FilterBar";
+import SearchBar from "../../components/SearchBar";
+import CategoryChips from "../../components/filter/CategoryChips";
 import ProductsGrid from "../../components/products-page/ProductGrid";
 import { products } from "../../data/mockProducts";
 
 export default function Products() {
     return (
-        <div className="flex flex-col gap-5 pt-20 px-6">
+        <div className="flex flex-col gap-5 pt-4 px-6">
 
             <SearchBar />
             <CategoryChips />

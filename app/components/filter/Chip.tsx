@@ -15,12 +15,9 @@ export default function FilterChip({
   variant = "default",
   children,
 }: FilterChipProps) {
-
   return (
-
     <button
       onClick={onClick}
-
       className={`
         px-3 py-0.5
         rounded-full
@@ -28,21 +25,20 @@ export default function FilterChip({
         whitespace-nowrap
         transition-all duration-300
         border-2
-
         ${
           selected
             ? variant === "outline"
-              ? "bg-white text-[#CD1E1E] border-[#CD1E1E]"
+              ? "bg-white dark:bg-transparent text-[#CD1E1E] border-[#CD1E1E]"
               : "bg-[#CD1E1E] text-white border-[#CD1E1E]"
-            : "bg-gray-200 text-gray-400 border-transparent hover:bg-gray-300 hover:text-gray-700"
+            : `bg-neutral-200 dark:bg-neutral-800
+               text-neutral-400 dark:text-neutral-400
+               border-transparent
+               hover:bg-neutral-300 dark:hover:bg-neutral-700
+               hover:text-neutral-700 dark:hover:text-neutral-200`
         }
       `}
     >
-
-      { children ? children : label }
-
+      {children ? children : label}
     </button>
-
   );
-
 }

@@ -10,174 +10,91 @@ interface Props {
   onClose: () => void;
 }
 
-export default function FilterSheet({
-  open,
-  onClose,
-}: Props) {
-
-  // Conectar filtros globales
-  const {
-    selectedFilters,
-    toggleFilter,
-    clearFilters,
-  } = useFilters();
+export default function FilterSheet({ open, onClose }: Props) {
+  const { selectedFilters, toggleFilter, clearFilters } = useFilters();
 
   return (
-
     <Drawer.Root
       open={open}
       onOpenChange={onClose}
       snapPoints={["50%", "70%", "95%"]}
     >
-
       <Drawer.Portal>
 
-        {/* BACKDROP */}
-
-        <Drawer.Overlay
-          className="
-            fixed inset-0 
-            bg-black/40
-            backdrop-blur-sm
-          "
-        />
-
-        {/* SHEET */}
+        <Drawer.Overlay className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
 
         <Drawer.Content
           className="
             fixed bottom-0 left-0 right-0
-            bg-white
+            bg-white dark:bg-neutral-900
             rounded-t-3xl
             p-4
             shadow-xl
           "
         >
-
-          {/* HANDLE */}
-
           <Drawer.Handle />
-          
-          {/* TITLE */}
 
           <Drawer.Title
             className="
-              text-lg 
-              font-semibold 
-              mb-6
-              mt-4
+              text-lg font-semibold mb-6 mt-4
+              text-neutral-900 dark:text-neutral-100
             "
           >
-
             Filters
-
           </Drawer.Title>
 
-          {/* FILTER GROUPS */}
-
           <div className="flex flex-col gap-6 mb-6">
-
             {filters.map((group) => (
-
               <div key={group.id}>
 
-                <h3 className="font-semibold mb-3">
+                <h3 className="font-semibold mb-3 text-neutral-800 dark:text-neutral-200">
                   {group.title}
                 </h3>
 
                 <div className="flex flex-wrap gap-2">
-
                   {group.options.map((option) => {
-
-                    // Saber si está seleccionado
-                    const isSelected =
-                      selectedFilters[
-                        group.id
-                      ]?.includes(
-                        option.id
-                      );
-
+                    const isSelected = selectedFilters[group.id]?.includes(option.id);
                     return (
-
                       <FilterChip
                         key={option.id}
-
                         label={option.label}
-
                         selected={isSelected}
-
-                        onClick={() =>
-                          toggleFilter(
-                            group.id,
-                            option.id
-                          )
-                        }
-
+                        onClick={() => toggleFilter(group.id, option.id)}
                       />
-
                     );
-
                   })}
-
                 </div>
 
               </div>
-
             ))}
-
           </div>
-
-          {/* APPLY BUTTON */}
 
           <button
             onClick={onClose}
             className="
-              w-full
-              bg-[#CD1E1E]
-              text-white
-              py-3
-              rounded-xl
-              font-medium
-              mt-6
+              w-full py-3 rounded-xl font-medium mt-6
+              bg-[#CD1E1E] text-white
+              hover:bg-[#b01919] transition-colors
             "
           >
-
             Apply Filters
-
           </button>
 
-          {/* REMOVE FILTERS BUTTON */}
-
           <button
-            onClick={() => {
-
-              clearFilters();
-
-              onClose();
-
-            }}
-
+            onClick={() => { clearFilters(); onClose(); }}
             className="
-              w-full
-              bg-gray-200
-              text-gray-700
-              py-3
-              rounded-xl
-              font-medium
-              mt-3
+              w-full py-3 rounded-xl font-medium mt-3
+              bg-neutral-200 dark:bg-neutral-800
+              text-neutral-700 dark:text-neutral-300
+              hover:bg-neutral-300 dark:hover:bg-neutral-700
+              transition-colors
             "
           >
-
             Remove Filters
-
           </button>
 
         </Drawer.Content>
-
       </Drawer.Portal>
-
     </Drawer.Root>
-
   );
-
 }

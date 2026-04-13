@@ -4,11 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
 
-// ─── CONFIG POR STEP ────────────────────────────────────────────────────────
-// Cada step tiene su propio control de imagen.
-// objectPosition: mueve la figura dentro del frame ("center center", "center top", "50% 80%", etc.)
-// scale: zoom (1 = normal, 1.2 = 20% más grande)
-// opacity: visibilidad de la imagen (0–1)
+const HEADER_OFFSET = 40;
 
 const steps = [
   {
@@ -102,7 +98,13 @@ const steps = [
     },
   },
 ];
-// ────────────────────────────────────────────────────────────────────────────
+
+function scrollToStep(i: number) {
+  const el = document.querySelector(`[data-step='${i}']`);
+  if (!el) return;
+  const top = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET;
+  window.scrollTo({ top, behavior: "smooth" });
+}
 
 export default function Page() {
   const [active, setActive] = React.useState(0);
@@ -116,7 +118,10 @@ export default function Page() {
             setActive(Number(entry.target.getAttribute("data-step")));
         });
       },
-      { threshold: 0.5 }
+      {
+        threshold: 0.5,
+        rootMargin: `-${HEADER_OFFSET}px 0px 0px 0px`,
+      }
     );
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
@@ -125,47 +130,54 @@ export default function Page() {
   return (
     <>
       {/* SIDE INDICATOR */}
-      <div className="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-3 z-50">
+      <div className="fixed right-4 bottom-10 -translate-y-1/2 flex flex-col items-center gap-3 z-50">
         {steps.map((_, i) => (
           <button
             key={i}
-            onClick={() =>
-              document
-                .querySelector(`[data-step='${i}']`)
-                ?.scrollIntoView({ behavior: "smooth", block: "start" })
-            }
+            onClick={() => scrollToStep(i)}
             className="flex flex-col items-center gap-1 group"
           >
-            <span className={`text-xs font-bold transition-all ${active === i ? "text-red-500" : "text-neutral-400"}`}>
+            <span
+              className={`text-xs font-bold transition-all ${
+                active === i ? "text-red-500" : "text-neutral-400"
+              }`}
+            >
               {String(i + 1).padStart(2, "0")}
             </span>
-            <span className={`rounded-full transition-all ${active === i ? "w-3 h-3 bg-red-500 scale-125" : "w-1.5 h-1.5 bg-neutral-400 group-hover:bg-neutral-500"}`} />
+            <span
+              className={`rounded-full transition-all ${
+                active === i
+                  ? "w-3 h-3 bg-red-500 scale-125"
+                  : "w-1.5 h-1.5 bg-neutral-400 group-hover:bg-neutral-500"
+              }`}
+            />
           </button>
         ))}
       </div>
 
+      {/* HERO */}
+      <section className="min-h-60 flex flex-col justify-center px-6 md:px-16 bg-neutral-950 text-white">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-[clamp(3rem,8vw,6rem)] font-black leading-[0.9] uppercase"
+        >
+          Healing
+          <br />
+          <span className="text-red-500">Process</span>
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="mt-6 text-white/50 max-w-sm"
+        >
+          Cuida tu tatuaje como el arte que es.
+        </motion.p>
+      </section>
+
       <main className="text-neutral-900">
-        {/* HERO */}
-        <section className="min-h-screen flex flex-col justify-center px-6 md:px-16 bg-neutral-950 text-white">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-[clamp(3rem,8vw,6rem)] font-black leading-[0.9] uppercase"
-          >
-            Healing
-            <br />
-            <span className="text-red-500">Process</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="mt-6 text-white/50 max-w-sm"
-          >
-            Cuida tu tatuaje como el arte que es.
-          </motion.p>
-        </section>
 
         {/* STEPS */}
         {steps.map((step, i) => (
@@ -198,23 +210,25 @@ export default function Page() {
               />
             </motion.div>
 
-            {/* GRADIENTE top — texto legible */}
+            {/* GRADIENTE top */}
             <div
               className="absolute inset-x-0 top-0 h-52 z-[1] pointer-events-none"
               style={{
-                background: "linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 70%, transparent 100%)",
+                background:
+                  "linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 70%, transparent 100%)",
               }}
             />
 
-            {/* GRADIENTE bottom — texto legible */}
+            {/* GRADIENTE bottom */}
             <div
               className="absolute inset-x-0 bottom-0 h-72 z-[1] pointer-events-none"
               style={{
-                background: "linear-gradient(to top, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.6) 55%, transparent 100%)",
+                background:
+                  "linear-gradient(to top, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.6) 55%, transparent 100%)",
               }}
             />
 
-            {/* TEXTO SUPERIOR — anclado arriba */}
+            {/* TEXTO SUPERIOR */}
             <motion.div
               initial={{ opacity: 0, y: -16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -240,7 +254,7 @@ export default function Page() {
               </div>
             </motion.div>
 
-            {/* TEXTO INFERIOR — anclado abajo */}
+            {/* TEXTO INFERIOR */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -269,6 +283,7 @@ export default function Page() {
             </p>
           </div>
         </section>
+
       </main>
     </>
   );
