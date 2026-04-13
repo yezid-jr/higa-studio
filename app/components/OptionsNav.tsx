@@ -23,7 +23,7 @@ export default function Nav() {
 
             {/* Línea roja deslizante — se mueve entre links con CSS */}
             {navItems.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = pathname === item.href || (item.href === "/portfolio" && pathname === "/");
               return (
                 <li key={item.label} className="relative">
                   <Link
