@@ -10,7 +10,6 @@
       { "id": "minimalista", "label": "Minimalista" },
       { "id": "neo-tradicional", "label": "Neo Tradicional" },
       { "id": "japones", "label": "Japonés" },
-
       { "id": "blackwork", "label": "Blackwork" },
       { "id": "fineline", "label": "Fine Line" },
       { "id": "lettering", "label": "Lettering" },
@@ -37,18 +36,13 @@
       { "id": "hombro", "label": "Hombro" },
       { "id": "pecho", "label": "Pecho" },
       { "id": "espalda", "label": "Espalda" },
-
       { "id": "pierna", "label": "Pierna" },
       { "id": "pantorrilla", "label": "Pantorrilla" },
       { "id": "muslo", "label": "Muslo" },
-
       { "id": "mano", "label": "Mano" },
       { "id": "dedos", "label": "Dedos" },
-
       { "id": "cuello", "label": "Cuello" },
-
       { "id": "costillas", "label": "Costillas" },
-
       { "id": "tobillo", "label": "Tobillo" },
       { "id": "muñeca", "label": "Muñeca" }
     ]
@@ -62,16 +56,13 @@
       { "id": "nature", "label": "Nature" },
       { "id": "flowers", "label": "Flowers" },
       { "id": "skull", "label": "Skull" },
-
       { "id": "portrait", "label": "Portrait" },
       { "id": "symbols", "label": "Symbols" },
       { "id": "religion", "label": "Religion" },
-
       { "id": "dragon", "label": "Dragon" },
       { "id": "lion", "label": "Lion" },
       { "id": "bird", "label": "Bird" },
       { "id": "butterfly", "label": "Butterfly" },
-
       { "id": "mandala", "label": "Mandala" },
       { "id": "landscape", "label": "Landscape" }
     ]
@@ -83,25 +74,16 @@
     "options": [
       { "id": "negro", "label": "Negro" },
       { "id": "color", "label": "Color" },
-
       { "id": "lineas-finas", "label": "Líneas Finas" },
       { "id": "lineas-gruesas", "label": "Líneas Gruesas" },
-
       { "id": "detallado", "label": "Detallado" },
       { "id": "simple", "label": "Simple" },
-
       { "id": "simetrico", "label": "Simétrico" },
-
       { "id": "realista", "label": "Realista" },
-
       { "id": "minimalista", "label": "Minimalista" },
-
       { "id": "decorativo", "label": "Decorativo" },
-
       { "id": "alto-contraste", "label": "Alto Contraste" },
-
       { "id": "sombras-suaves", "label": "Sombras Suaves" },
-
       { "id": "sombras-fuertes", "label": "Sombras Fuertes" }
     ]
   }

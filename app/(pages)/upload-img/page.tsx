@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { filtersConfig } from "./filtersConfig";
+import  filtersConfigData  from "./../../data/filters.json";
+import { FilterGroup } from "../../types/filters";
 
 type Filters = Record<string, string[]>;
 
@@ -12,6 +13,7 @@ export default function UploadPage() {
   const [title, setTitle] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const filtersConfig: FilterGroup[] = filtersConfigData as FilterGroup[];
 
   // Inicializa TODAS las keys del config — este era el bug
   const [selectedFilters, setSelectedFilters] = useState<Filters>(() =>
@@ -82,7 +84,7 @@ export default function UploadPage() {
         Subir tatuaje
       </h1>
 
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col md:flex-row gap-8">
 
         {/* COLUMNA IZQUIERDA — imagen + título */}
         <div className="flex flex-col gap-4 lg:w-72 shrink-0">
