@@ -78,8 +78,8 @@ const steps = [
     image: "/imgs/healing-process/20260413_220236.jpg",
     imgConfig: {
       objectPosition: "center center",
-      scale: 1.0,
-      opacity: 0.6,
+      scale: 0.8,
+      opacity: 1,
     },
   },
   {
