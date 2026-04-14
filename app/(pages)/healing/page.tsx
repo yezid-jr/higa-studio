@@ -75,7 +75,7 @@ const steps = [
     description:
       "Protege el tatuaje del sol. Usa ropa o protector solar cuando cicatrice.",
     warning: "El sol decolora la tinta.",
-    image: "/imgs/healing-process/step5.png",
+    image: "/imgs/healing-process/20260413_220236.jpg",
     imgConfig: {
       objectPosition: "center center",
       scale: 1.0,
