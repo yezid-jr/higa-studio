@@ -130,7 +130,7 @@ export default function Page() {
   return (
     <>
       {/* SIDE INDICATOR */}
-      <div className="fixed right-4 bottom-10 -translate-y-1/2 flex flex-col items-center gap-3 z-50">
+      <div className="fixed right-4 bottom-4 -translate-y-1/2 flex flex-col items-center gap-3 z-50">
         {steps.map((_, i) => (
           <button
             key={i}

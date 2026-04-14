@@ -67,13 +67,13 @@ export default function Hero() {
 
 
             <a
-              href="https://wa.me/573052201926"
+              href="https://wa.me/573052201926?text=Hola%2C%20quiero%20agendar%20una%20cita%20para%20un%20tatuaje"
               target="_blank"
               rel="noopener noreferrer"
               className="
                 flex items-center w-fit
                 mt-6 px-8 py-3 rounded-lg
-                bg-black text-white
+                bg-white text-black dark:bg-red-500 dark:text-white
                 hover:bg-neutral-800 transition
               "
             >
@@ -88,8 +88,8 @@ export default function Hero() {
       <div
         className={`
           fixed top-0 left-0 z-50
-          flex items-center h-12 px-6
-          transition-all duration-300 ease-in-out
+          flex items-center h-12 px-6 pr-[100vw]
+          transition-all duration-500 ease-in-out
           ${scrolled
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-4 pointer-events-none"

@@ -36,7 +36,7 @@ export default function SwitchTheme() {
       </span>
       <span className="absolute right-2 flex items-center justify-center w-4 h-4">
         <Moon
-          className={`w-3.5 h-3.5 text-neutral-400 transition-opacity duration-300 ${isDark ? "opacity-0" : "opacity-100"}`}
+          className={`w-3.5 h-3.5 text-red-500 transition-opacity duration-300 ${isDark ? "opacity-0" : "opacity-100"}`}
         />
       </span>
 
@@ -44,7 +44,7 @@ export default function SwitchTheme() {
       <span
         className={`
           relative z-10 w-6 h-6 rounded-full
-          bg-white dark:bg-neutral-950
+          bg-white dark:bg-[#CD1E1E]
           border border-neutral-200 dark:border-neutral-600
           shadow-sm
           transition-transform duration-300 ease-in-out

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Portafolio", href: "/portfolio" },
-  { label: "Productos", href: "/products" },
+  // { label: "Productos", href: "/products" },
   { label: "Sobre mí", href: "/about-me" },
   { label: "Contacto", href: "/contact" },
   { label: "Healing Process", href: "/healing" },
@@ -15,7 +15,7 @@ export default function Nav() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-9.5 z-50 w-full border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-sm">
+    <nav className="sticky top-[48px] z-50 w-full border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto">
 
         <div className="overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
