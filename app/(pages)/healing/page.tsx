@@ -17,7 +17,7 @@ const steps = [
     warning: "No dejes gasa normal más de 4 horas.",
     image: "/imgs/healing-process/step1.png",
     imgConfig: {
-      objectPosition: "center -20%",
+      objectPosition: "center center",
       scale: 1.19,
       opacity: 1,
     },
@@ -62,7 +62,7 @@ const steps = [
     warning: "Rascar = daño permanente.",
     image: "/imgs/healing-process/step4.png",
     imgConfig: {
-      objectPosition: "center -62%",
+      objectPosition: "center -10%",
       scale: 1.09,
       opacity: 1,
     },
@@ -70,10 +70,10 @@ const steps = [
   {
     number: "05",
     phase: "Semanas 2–4",
-    title: "Evita el sol",
+    title: "Evita el sol, piscinas, Playas y perfumes",
     time: "4 semanas",
     description:
-      "Protege el tatuaje del sol. Usa ropa o protector solar cuando cicatrice.",
+      "Protege el tatuaje del sol. Cúbrelo con ropa o aplica SPF 50+ una vez cicatrizado. Evita piscinas, mar, jacuzzi y bañeras",
     warning: "El sol decolora la tinta.",
     image: "/imgs/healing-process/20260413_220236.jpg",
     imgConfig: {
