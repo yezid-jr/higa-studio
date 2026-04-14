@@ -5,109 +5,51 @@ import path from "path";
 export async function POST(req: Request) {
   try {
     const data = await req.formData();
-
     const file = data.get("file") as File;
-    const filters = JSON.parse(
-      data.get("filters") as string
-    );
+    const filters = JSON.parse(data.get("filters") as string);
 
     if (!file) {
-      return NextResponse.json(
-        { error: "No file uploaded" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "No file" }, { status: 400 });
     }
 
-    /* ============================= */
-    /* SAVE IMAGE */
-    /* ============================= */
-
+    // Guardar imagen
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
+    const fileName = Date.now() + "-" + file.name;
 
-    const fileName =
-      Date.now() + "-" + file.name;
+    const imageDir = path.join(process.cwd(), "public", "imgs", "MyTattoos", "Edits");
 
-    const imagePath = path.join(
-      process.cwd(),
-      "public",
-      "imgs",
-      "MyTattoos",
-      "Edits",
-      fileName
-    );
+    // Crea la carpeta si no existe — este era probablemente el error silencioso
+    fs.mkdirSync(imageDir, { recursive: true });
 
-    fs.writeFileSync(imagePath, buffer);
+    fs.writeFileSync(path.join(imageDir, fileName), buffer);
 
-    const publicImagePath =
-      "/imgs/MyTattoos/Edits/" + fileName;
+    const publicImagePath = "/imgs/MyTattoos/Edits/" + fileName;
 
-    /* ============================= */
-    /* READ JSON */
-    /* ============================= */
+    // Leer y actualizar JSON
+    const jsonPath = path.join(process.cwd(), "app", "data", "my-tattoos.json");
 
-    const jsonPath = path.join(
-      process.cwd(),
-      "app",
-      "data",
-      "my-tattoos.json"
-    );
-
-    const fileData = fs.readFileSync(
-      jsonPath,
-      "utf-8"
-    );
-
-    const tattoos = JSON.parse(fileData);
-
-    /* ============================= */
-    /* CREATE NEW TATTOO */
-    /* ============================= */
+    const tattoos = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
 
     const newTattoo = {
       id: Date.now(),
-
-      title:
-        filters.title ||
-        file.name.replace(/\.[^/.]+$/, ""),
-
+      title: filters.title || file.name.replace(/\.[^/.]+$/, ""),
       image: publicImagePath,
-
       category: filters.category || [],
-
       topic: filters.topic || [],
-
       placement: filters.placement || [],
-
       size: filters.size || [],
-
-      tags: filters.tags || []
+      tags: filters.tags || [],
     };
 
     tattoos.push(newTattoo);
 
-    /* ============================= */
-    /* SAVE JSON */
-    /* ============================= */
+    fs.writeFileSync(jsonPath, JSON.stringify(tattoos, null, 2));
 
-    fs.writeFileSync(
-      jsonPath,
-      JSON.stringify(tattoos, null, 2)
-    );
-
-    return NextResponse.json({
-      success: true,
-      tattoo: newTattoo
-    });
+    return NextResponse.json({ success: true, tattoo: newTattoo });
 
   } catch (error) {
-
-    console.error(error);
-
-    return NextResponse.json(
-      { error: "Upload failed" },
-      { status: 500 }
-    );
-
+    console.error("Upload error:", error);
+    return NextResponse.json({ error: "Upload failed" }, { status: 500 });
   }
 }

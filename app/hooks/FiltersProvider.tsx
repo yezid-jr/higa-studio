@@ -8,6 +8,28 @@ import {
 
 import { SelectedFilters } from "../types/filters";
 
+import { filtersConfig } from "../(pages)/upload-img/filtersConfig";
+
+/* ========================= */
+/* INITIAL FILTERS */
+/* ========================= */
+
+function createInitialFilters(): SelectedFilters {
+
+  const initial: SelectedFilters = {};
+
+  filtersConfig.forEach(group => {
+
+    initial[group.id] = [];
+
+  });
+
+  return initial;
+
+}
+
+/* ========================= */
+
 interface FiltersContextType {
 
   selectedFilters: SelectedFilters;
@@ -28,6 +50,8 @@ const FiltersContext =
     FiltersContextType | undefined
   >(undefined);
 
+/* ========================= */
+
 export function FiltersProvider({
   children,
 }: {
@@ -37,7 +61,11 @@ export function FiltersProvider({
   const [
     selectedFilters,
     setSelectedFilters,
-  ] = useState<SelectedFilters>({});
+  ] = useState<SelectedFilters>(
+    createInitialFilters()
+  );
+
+  /* ========================= */
 
   const toggleFilter = (
     groupId: string,
@@ -67,14 +95,24 @@ export function FiltersProvider({
 
   };
 
+  /* ========================= */
+
   const clearFilters = () => {
-    setSelectedFilters({});
+
+    setSelectedFilters(
+      createInitialFilters()
+    );
+
   };
+
+  /* ========================= */
 
   const totalSelected =
     Object.values(
       selectedFilters
     ).flat().length;
+
+  /* ========================= */
 
   return (
 
@@ -95,7 +133,9 @@ export function FiltersProvider({
 
 }
 
-// Hook global
+/* ========================= */
+/* HOOK */
+/* ========================= */
 
 export function useFilters() {
 
