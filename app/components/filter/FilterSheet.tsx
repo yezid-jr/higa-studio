@@ -34,7 +34,7 @@ export default function FilterSheet({ open, onClose }: Props) {
 
         {/* El overlay siempre cierra al hacer click, independiente del snap */}
         <Drawer.Overlay
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[60]"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-60"
           onClick={() => {
             setSnap(0.7);
             onClose();
@@ -47,7 +47,7 @@ export default function FilterSheet({ open, onClose }: Props) {
             bg-white dark:bg-neutral-900
             rounded-t-3xl shadow-xl
             flex flex-col
-            outline-none z-[60]
+            outline-none z-60
           "
           style={{ height: "95dvh" }}
         >
