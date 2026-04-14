@@ -7,16 +7,20 @@
         "category": [
             "realismo"
         ],
-        "size": [
-            "large"
-        ],
         "topic": [
-            "animals"
+            "animals",
+            "lion"
         ],
         "tags": [
-            "leon",
+            "negro",
             "realista",
-            "negro"
+            "detallado"
+        ],
+        "placement": [
+            "brazo"
+        ],
+        "size": [
+            "large"
         ]
     },
     {
@@ -27,16 +31,19 @@
         "category": [
             "geometrico"
         ],
-        "size": [
-            "medium"
-        ],
         "topic": [
-            "nature"
+            "mandala"
         ],
         "tags": [
-            "mandala",
             "geometrico",
-            "lineas"
+            "lineas-finas",
+            "simetrico"
+        ],
+        "placement": [
+            "pierna"
+        ],
+        "size": [
+            "medium"
         ]
     },
     {
@@ -47,16 +54,19 @@
         "category": [
             "acuarela"
         ],
-        "size": [
-            "medium"
-        ],
         "topic": [
             "flowers"
         ],
         "tags": [
-            "flor",
+            "color",
             "acuarela",
-            "color"
+            "decorativo"
+        ],
+        "placement": [
+            "espalda"
+        ],
+        "size": [
+            "medium"
         ]
     },
     {
@@ -67,16 +77,19 @@
         "category": [
             "tradicional"
         ],
-        "size": [
-            "medium"
-        ],
         "topic": [
             "skull"
         ],
         "tags": [
-            "calavera",
-            "tradicional",
-            "colores"
+            "color",
+            "lineas-gruesas",
+            "tradicional"
+        ],
+        "placement": [
+            "brazo"
+        ],
+        "size": [
+            "medium"
         ]
     },
     {
@@ -87,16 +100,19 @@
         "category": [
             "minimalista"
         ],
-        "size": [
-            "small"
-        ],
         "topic": [
             "nature"
         ],
         "tags": [
-            "montaña",
             "minimalista",
-            "lineas"
+            "lineas-finas",
+            "simple"
+        ],
+        "placement": [
+            "tobillo"
+        ],
+        "size": [
+            "small"
         ]
     },
     {
@@ -107,16 +123,20 @@
         "category": [
             "neo-tradicional"
         ],
-        "size": [
-            "large"
-        ],
         "topic": [
-            "animals"
+            "animals",
+            "bird"
         ],
         "tags": [
-            "ave",
-            "neo-tradicional",
-            "colores"
+            "color",
+            "decorativo",
+            "neo-tradicional"
+        ],
+        "placement": [
+            "pecho"
+        ],
+        "size": [
+            "large"
         ]
     },
     {
@@ -127,16 +147,19 @@
         "category": [
             "japones"
         ],
-        "size": [
-            "large"
-        ],
         "topic": [
-            "animals"
+            "dragon"
         ],
         "tags": [
-            "dragon",
+            "color",
             "japones",
-            "colores"
+            "detallado"
+        ],
+        "placement": [
+            "espalda"
+        ],
+        "size": [
+            "large"
         ]
     },
     {
@@ -147,16 +170,19 @@
         "category": [
             "blackwork"
         ],
-        "size": [
-            "medium"
-        ],
         "topic": [
-            "nature"
+            "mandala"
         ],
         "tags": [
-            "mandala",
-            "blackwork",
-            "negro"
+            "negro",
+            "alto-contraste",
+            "blackwork"
+        ],
+        "placement": [
+            "brazo"
+        ],
+        "size": [
+            "medium"
         ]
     },
     {
@@ -167,137 +193,19 @@
         "category": [
             "realismo"
         ],
+        "topic": [
+            "portrait"
+        ],
+        "tags": [
+            "color",
+            "detallado",
+            "realista"
+        ],
+        "placement": [
+            "brazo"
+        ],
         "size": [
             "large"
-        ],
-        "topic": [
-            "people"
-        ],
-        "tags": [
-            "retrato",
-            "realista",
-            "colores"
-        ]
-    },
-    {
-        "id": 10,
-        "title": "Tatuaje Geométrico Lobo",
-        "image": "/imgs/MyTattoos/Edits/dark-tattoo.png",
-        "description": "Tatuaje de lobo en estilo geométrico en pierna",
-        "category": [
-            "geometrico"
-        ],
-        "size": [
-            "medium"
-        ],
-        "topic": [
-            "animals"
-        ],
-        "tags": [
-            "lobo",
-            "geometrico",
-            "lineas"
-        ]
-    },
-    {
-        "id": 11,
-        "title": "Tatuaje Acuarela Mariposa",
-        "image": "/imgs/MyTattoos/Edits/snake-tattoo-red.png",
-        "description": "Tatuaje de mariposa en estilo acuarela en hombro",
-        "category": [
-            "acuarela"
-        ],
-        "size": [
-            "small"
-        ],
-        "topic": [
-            "animals"
-        ],
-        "tags": [
-            "mariposa",
-            "acuarela",
-            "color"
-        ]
-    },
-    {
-        "id": 12,
-        "title": "Tatuaje Tradicional Ancla",
-        "image": "/imgs/MyTattoos/Edits/grulla-tattoo.jpg",
-        "description": "Tatuaje de ancla en estilo tradicional en brazo",
-        "category": [
-            "tradicional"
-        ],
-        "size": [
-            "medium"
-        ],
-        "topic": [
-            "nautical"
-        ],
-        "tags": [
-            "ancla",
-            "tradicional",
-            "colores"
-        ]
-    },
-    {
-        "id": 14,
-        "title": "Tatuaje Minimalista Corazón",
-        "image": "/imgs/MyTattoos/Edits/fenix-tattoo.png",
-        "description": "Tatuaje de corazón en estilo minimalista en muñeca",
-        "category": [
-            "minimalista"
-        ],
-        "size": [
-            "small"
-        ],
-        "topic": [
-            "symbols"
-        ],
-        "tags": [
-            "corazon",
-            "minimalista",
-            "lineas"
-        ]
-    },
-    {
-        "id": 15,
-        "title": "Tatuaje Minimalista Corazón",
-        "image": "/imgs/MyTattoos/Edits/snake-tattoo-chest.png",
-        "description": "Tatuaje de corazón en estilo minimalista en muñeca",
-        "category": [
-            "minimalista"
-        ],
-        "size": [
-            "small"
-        ],
-        "topic": [
-            "symbols"
-        ],
-        "tags": [
-            "corazon",
-            "minimalista",
-            "lineas"
-        ]
-    },
-    {
-        "id": 16,
-        "title": "Tatuaje Minimalista Corazón",
-        "image": "/imgs/MyTattoos/Edits/dragon-meliodas.png",
-        "description": "Tatuaje de corazón en estilo minimalista en muñeca",
-        "category": [
-            "minimalista"
-        ],
-        "size": [
-            "small"
-        ],
-        "topic": [
-            "symbols"
-        ],
-        "tags": [
-            "corazon",
-            "minimalista",
-            "lineas"
         ]
     }
 ]
-    

@@ -9,7 +9,12 @@
       { "id": "tradicional", "label": "Tradicional" },
       { "id": "minimalista", "label": "Minimalista" },
       { "id": "neo-tradicional", "label": "Neo Tradicional" },
-      { "id": "japones", "label": "Japonés" }
+      { "id": "japones", "label": "Japonés" },
+
+      { "id": "blackwork", "label": "Blackwork" },
+      { "id": "fineline", "label": "Fine Line" },
+      { "id": "lettering", "label": "Lettering" },
+      { "id": "anime", "label": "Anime" }
     ]
   },
 
@@ -24,13 +29,51 @@
   },
 
   {
+    "id": "placement",
+    "title": "By Placement",
+    "options": [
+      { "id": "brazo", "label": "Brazo" },
+      { "id": "antebrazo", "label": "Antebrazo" },
+      { "id": "hombro", "label": "Hombro" },
+      { "id": "pecho", "label": "Pecho" },
+      { "id": "espalda", "label": "Espalda" },
+
+      { "id": "pierna", "label": "Pierna" },
+      { "id": "pantorrilla", "label": "Pantorrilla" },
+      { "id": "muslo", "label": "Muslo" },
+
+      { "id": "mano", "label": "Mano" },
+      { "id": "dedos", "label": "Dedos" },
+
+      { "id": "cuello", "label": "Cuello" },
+
+      { "id": "costillas", "label": "Costillas" },
+
+      { "id": "tobillo", "label": "Tobillo" },
+      { "id": "muñeca", "label": "Muñeca" }
+    ]
+  },
+
+  {
     "id": "topic",
     "title": "By Topic",
     "options": [
       { "id": "animals", "label": "Animals" },
       { "id": "nature", "label": "Nature" },
+      { "id": "flowers", "label": "Flowers" },
       { "id": "skull", "label": "Skull" },
-      { "id": "flowers", "label": "Flowers" }
+
+      { "id": "portrait", "label": "Portrait" },
+      { "id": "symbols", "label": "Symbols" },
+      { "id": "religion", "label": "Religion" },
+
+      { "id": "dragon", "label": "Dragon" },
+      { "id": "lion", "label": "Lion" },
+      { "id": "bird", "label": "Bird" },
+      { "id": "butterfly", "label": "Butterfly" },
+
+      { "id": "mandala", "label": "Mandala" },
+      { "id": "landscape", "label": "Landscape" }
     ]
   },
 
@@ -38,13 +81,28 @@
     "id": "tags",
     "title": "By Tags",
     "options": [
-      { "id": "leon", "label": "León" },
-      { "id": "mandala", "label": "Mandala" },
-      { "id": "flor", "label": "Flor" },
-      { "id": "calavera", "label": "Calavera" },
-      { "id": "dragon", "label": "Dragón" },
-      { "id": "ave", "label": "Ave" },
-      { "id": "montaña", "label": "Montaña" }
+      { "id": "negro", "label": "Negro" },
+      { "id": "color", "label": "Color" },
+
+      { "id": "lineas-finas", "label": "Líneas Finas" },
+      { "id": "lineas-gruesas", "label": "Líneas Gruesas" },
+
+      { "id": "detallado", "label": "Detallado" },
+      { "id": "simple", "label": "Simple" },
+
+      { "id": "simetrico", "label": "Simétrico" },
+
+      { "id": "realista", "label": "Realista" },
+
+      { "id": "minimalista", "label": "Minimalista" },
+
+      { "id": "decorativo", "label": "Decorativo" },
+
+      { "id": "alto-contraste", "label": "Alto Contraste" },
+
+      { "id": "sombras-suaves", "label": "Sombras Suaves" },
+
+      { "id": "sombras-fuertes", "label": "Sombras Fuertes" }
     ]
   }
 ]
