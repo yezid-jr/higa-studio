@@ -8,13 +8,11 @@
             "realismo"
         ],
         "topic": [
-            "animals",
-            "lion"
+            "portrait"
         ],
         "tags": [
             "negro",
-            "realista",
-            "detallado"
+            "realista"
         ],
         "placement": [
             "brazo"
@@ -29,18 +27,20 @@
         "image": "/imgs/MyTattoos/Edits/brujula-tattoo.png",
         "description": "Tatuaje de mandala con diseño geométrico en pierna",
         "category": [
-            "geometrico"
+            "geometrico",
+            "blackwork"
         ],
         "topic": [
-            "mandala"
+            "symbols"
         ],
         "tags": [
             "geometrico",
             "lineas-finas",
-            "simetrico"
+            "simetrico",
+            "negro"
         ],
         "placement": [
-            "pierna"
+            "brazo"
         ],
         "size": [
             "medium"
@@ -52,18 +52,20 @@
         "image": "/imgs/MyTattoos/Edits/kny-anime-tattoo.png",
         "description": "Tatuaje de flor en estilo acuarela en espalda",
         "category": [
-            "acuarela"
+            "anime",
+            "blackwork"
         ],
         "topic": [
-            "flowers"
+            "flowers",
+            "kimetsu-no-yaiba"
         ],
         "tags": [
-            "color",
+            "negro",
             "acuarela",
             "decorativo"
         ],
         "placement": [
-            "espalda"
+            "pierna"
         ],
         "size": [
             "medium"
@@ -81,15 +83,14 @@
             "skull"
         ],
         "tags": [
-            "color",
             "lineas-gruesas",
-            "tradicional"
+            "lineas-finas"
         ],
         "placement": [
             "brazo"
         ],
         "size": [
-            "medium"
+            "small"
         ]
     },
     {
@@ -101,7 +102,8 @@
             "minimalista"
         ],
         "topic": [
-            "nature"
+            "nature",
+            "mother"
         ],
         "tags": [
             "minimalista",
@@ -109,7 +111,7 @@
             "simple"
         ],
         "placement": [
-            "tobillo"
+            "brazo"
         ],
         "size": [
             "small"
@@ -121,19 +123,18 @@
         "image": "/imgs/MyTattoos/letters-tattoo.webp",
         "description": "Tatuaje de ave en estilo neo tradicional en pecho",
         "category": [
-            "neo-tradicional"
+            "lettering",
+            "minimalista"
         ],
         "topic": [
-            "animals",
-            "bird"
+            "symbols"
         ],
         "tags": [
-            "color",
-            "decorativo",
-            "neo-tradicional"
+            "negro",
+            "lineas-finas"
         ],
         "placement": [
-            "pecho"
+            "cadera"
         ],
         "size": [
             "large"
@@ -192,6 +193,144 @@
         "description": "Tatuaje de retrato en estilo realismo en brazo",
         "category": [
             "realismo"
+        ],
+        "topic": [
+            "portrait"
+        ],
+        "tags": [
+            "color",
+            "detallado",
+            "realista"
+        ],
+        "placement": [
+            "brazo"
+        ],
+        "size": [
+            "large"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Tatuaje Geométrico Lobo",
+        "image": "/imgs/MyTattoos/Edits/dark-tattoo.png",
+        "description": "Tatuaje de lobo en estilo geométrico en pierna",
+        "category": [
+            "geometrico"
+        ],
+        "topic": [
+            "portrait"
+        ],
+        "tags": [
+            "color",
+            "detallado",
+            "realista"
+        ],
+        "placement": [
+            "brazo"
+        ],
+        "size": [
+            "large"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Tatuaje Acuarela Mariposa",
+        "image": "/imgs/MyTattoos/Edits/snake-tattoo-red.png",
+        "description": "Tatuaje de mariposa en estilo acuarela en hombro",
+        "category": [
+            "acuarela"
+        ],
+        "topic": [
+            "portrait"
+        ],
+        "tags": [
+            "color",
+            "detallado",
+            "realista"
+        ],
+        "placement": [
+            "brazo"
+        ],
+        "size": [
+            "large"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Tatuaje Tradicional Ancla",
+        "image": "/imgs/MyTattoos/Edits/grulla-tattoo.jpg",
+        "description": "Tatuaje de ancla en estilo tradicional en brazo",
+        "category": [
+            "tradicional"
+        ],
+        "topic": [
+            "portrait"
+        ],
+        "tags": [
+            "color",
+            "detallado",
+            "realista"
+        ],
+        "placement": [
+            "brazo"
+        ],
+        "size": [
+            "large"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Tatuaje Minimalista Corazón",
+        "image": "/imgs/MyTattoos/Edits/fenix-tattoo.png",
+        "description": "Tatuaje de corazón en estilo minimalista en muñeca",
+        "category": [
+            "minimalista"
+        ],
+        "topic": [
+            "portrait"
+        ],
+        "tags": [
+            "color",
+            "detallado",
+            "realista"
+        ],
+        "placement": [
+            "brazo"
+        ],
+        "size": [
+            "large"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Tatuaje Minimalista Corazón",
+        "image": "/imgs/MyTattoos/Edits/snake-tattoo-chest.png",
+        "description": "Tatuaje de corazón en estilo minimalista en muñeca",
+        "category": [
+            "minimalista"
+        ],
+        "topic": [
+            "portrait"
+        ],
+        "tags": [
+            "color",
+            "detallado",
+            "realista"
+        ],
+        "placement": [
+            "brazo"
+        ],
+        "size": [
+            "large"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Tatuaje Minimalista Corazón",
+        "image": "/imgs/MyTattoos/Edits/dragon-meliodas.png",
+        "description": "Tatuaje de corazón en estilo minimalista en muñeca",
+        "category": [
+            "minimalista"
         ],
         "topic": [
             "portrait"

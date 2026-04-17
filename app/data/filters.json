@@ -44,7 +44,16 @@
       { "id": "cuello", "label": "Cuello" },
       { "id": "costillas", "label": "Costillas" },
       { "id": "tobillo", "label": "Tobillo" },
-      { "id": "muñeca", "label": "Muñeca" }
+      { "id": "muñeca", "label": "Muñeca" },
+      { "id": "cara", "label": "Cara" },
+      { "id": "cabeza", "label": "Cabeza" },
+      { "id": "oreja", "label": "Oreja" },
+      { "id": "labio", "label": "Labio" },
+      { "id": "lengua", "label": "Lengua" },
+      { "id": "omoplato", "label": "Omóplato" },
+      { "id": "clavicula", "label": "Clavícula" },
+      { "id": "abdomen", "label": "Abdomen" },
+      { "id": "cadera", "label": "Cadera" }
     ]
   },
 
@@ -64,7 +73,25 @@
       { "id": "bird", "label": "Bird" },
       { "id": "butterfly", "label": "Butterfly" },
       { "id": "mandala", "label": "Mandala" },
-      { "id": "landscape", "label": "Landscape" }
+      { "id": "landscape", "label": "Landscape" },
+      { "id": "ocean", "label": "Ocean" },
+      { "id": "space", "label": "Space" },
+      { "id": "mythology", "label": "Mythology" },
+      { "id": "abstract", "label": "Abstract" },
+      { "id": "celestial", "label": "Celestial" },
+      { "id": "food", "label": "Food" },
+      { "id": "music", "label": "Music" },
+      { "id": "mother", "label": "Mamá" },
+      { "id": "sports", "label": "Sports" },
+      { "id": "travel", "label": "Travel" },
+      { "id": "horror", "label": "Horror" },
+      { "id": "comic", "label": "Comic" },
+      { "id": "games", "label": "Games" },
+      { "id": "technology", "label": "Technology" },
+      { "id": "architecture", "label": "Architecture" },
+      { "id": "horror", "label": "Horror" },
+      { "id": "comic", "label": "Comic" },
+      { "id": "kimetzu-no-yaiba", "label": "Kimetzu No Yaiba" }
     ]
   },
 
@@ -76,15 +103,8 @@
       { "id": "color", "label": "Color" },
       { "id": "lineas-finas", "label": "Líneas Finas" },
       { "id": "lineas-gruesas", "label": "Líneas Gruesas" },
-      { "id": "detallado", "label": "Detallado" },
       { "id": "simple", "label": "Simple" },
-      { "id": "simetrico", "label": "Simétrico" },
-      { "id": "realista", "label": "Realista" },
-      { "id": "minimalista", "label": "Minimalista" },
-      { "id": "decorativo", "label": "Decorativo" },
-      { "id": "alto-contraste", "label": "Alto Contraste" },
-      { "id": "sombras-suaves", "label": "Sombras Suaves" },
-      { "id": "sombras-fuertes", "label": "Sombras Fuertes" }
+      { "id": "simetrico", "label": "Simétrico" }
     ]
   }
 ]
