@@ -47,6 +47,13 @@ export function useFilteredImages() {
 
     });
 
-  return filteredImages;
+  // Ordenar por `id` descendente para mostrar primero las imágenes más nuevas
+  const sortedImages = filteredImages.sort((a, b) => {
+    const idA = typeof a.id === "number" ? a.id : 0;
+    const idB = typeof b.id === "number" ? b.id : 0;
+    return idB - idA;
+  });
+
+  return sortedImages;
 
 }

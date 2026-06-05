@@ -31,8 +31,15 @@ export async function POST(req: Request) {
 
     const tattoos = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
 
+    // Generar id secuencial (max id existente + 1) para mantener un orden claro
+    const existingIds = tattoos.map((t: any) =>
+      typeof t.id === "number" ? t.id : Number(t.id) || 0
+    );
+    const maxId = existingIds.length ? Math.max(...existingIds) : 0;
+    const nextId = maxId + 1;
+
     const newTattoo = {
-      id: Date.now(),
+      id: nextId,
       title: filters.title || file.name.replace(/\.[^/.]+$/, ""),
       image: publicImagePath,
       category: filters.category || [],
@@ -42,7 +49,8 @@ export async function POST(req: Request) {
       tags: filters.tags || [],
     };
 
-    tattoos.push(newTattoo);
+    // Insertar al inicio para que las subidas aparezcan primero
+    tattoos.unshift(newTattoo);
 
     fs.writeFileSync(jsonPath, JSON.stringify(tattoos, null, 2));
 

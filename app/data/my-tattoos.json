@@ -1,24 +1,26 @@
 [
   {
-    "id": 1,
-    "title": "Tatuaje Realista León",
-    "image": "/imgs/MyTattoos/Edits/nino-realismo-tattoo.png",
-    "description": "Tatuaje estilo realismo de león en brazo",
+    "id": 18,
+    "title": "letras portugues brazo Yair",
+    "image": "/imgs/MyTattoos/Edits/1780692559590-Gemini_Generated_Image_u1kxm0u1kxm0u1kx.png",
     "category": [
-      "realismo"
+      "realismo",
+      "lettering"
     ],
     "topic": [
-      "portrait"
-    ],
-    "tags": [
-      "negro",
-      "realista"
+      "religion",
+      "symbols"
     ],
     "placement": [
-      "brazo"
+      "antebrazo",
+      "mano"
     ],
     "size": [
+      "medium",
       "large"
+    ],
+    "tags": [
+      "negro"
     ]
   },
   {
@@ -325,7 +327,7 @@
     ]
   },
   {
-    "id": 16,
+    "id": 1,
     "title": "Tatuaje Minimalista Corazón",
     "image": "/imgs/MyTattoos/Edits/dragon-meliodas.png",
     "description": "Tatuaje de corazón en estilo minimalista en muñeca",
@@ -348,23 +350,25 @@
     ]
   },
   {
-    "id": 1780691382142,
-    "title": "tatuaje portugues brazo",
-    "image": "/imgs/MyTattoos/Edits/1780691382140-Gemini_Generated_Image_u1kxm0u1kxm0u1kx.png",
+    "id": 17,
+    "title": "Tatuaje Realista León",
+    "image": "/imgs/MyTattoos/Edits/nino-realismo-tattoo.png",
+    "description": "Tatuaje estilo realismo de león en brazo",
     "category": [
-      "lettering",
-      "blackwork"
+      "realismo"
     ],
-    "topic": [],
+    "topic": [
+      "portrait"
+    ],
+    "tags": [
+      "negro",
+      "realista"
+    ],
     "placement": [
-      "brazo",
-      "antebrazo"
+      "brazo"
     ],
     "size": [
       "large"
-    ],
-    "tags": [
-      "negro"
     ]
   }
 ]
