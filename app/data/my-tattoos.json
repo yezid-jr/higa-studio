@@ -1,5 +1,28 @@
 [
   {
+    "id": 23,
+    "title": "cayena rojo",
+    "image": "/imgs/MyTattoos/Edits/1793330328931-df7e7473-68ee-4657-8775-96b103b7fea2.jpg",
+    "category": [
+      "minimalista",
+      "fineline"
+    ],
+    "topic": [
+      "flowers"
+    ],
+    "placement": [
+      "brazo",
+      "antebrazo"
+    ],
+    "size": [
+      "small"
+    ],
+    "tags": [
+      "color",
+      "lineas-finas"
+    ]
+  },
+  {
     "id": 22,
     "title": "kanji amor rojo",
     "image": "/imgs/MyTattoos/Edits/1793318843917-Gemini_Generated_Image_1f1j651f1j651f1j.jpg",
@@ -40,24 +63,6 @@
       "negro",
       "lineas-finas"
     ]
-  },
-  {
-    "id": 20,
-    "title": "cayena rojo",
-    "image": "/imgs/MyTattoos/Edits/1793318739524-Gemini_Generated_Image_axkydlaxkydlaxky 2.jpg",
-    "category": [
-      "fineline",
-      "minimalista"
-    ],
-    "topic": [
-      "nature",
-      "flowers"
-    ],
-    "placement": [
-      "brazo"
-    ],
-    "size": [],
-    "tags": []
   },
   {
     "id": 19,
